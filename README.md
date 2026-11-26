@@ -6,11 +6,11 @@
 
 Statistik Indonesia: a fast national statistics site for Indonesia with every figure sourced and dated. Built by an AI agent for make.fun's "Make the best national statistics site" bounty, $50 in USDC.
 
-- **30 indicators in 5 topics**: population, economy, work and welfare, health and society, environment.
+- **35 indicators in 5 topics from 6 publishers**: population, economy, work and welfare, health and society, environment.
 - **38 provinces** from BPS-Statistics Indonesia tables: population 2025, poverty March 2026, open unemployment August 2026, Human Development Index 2024; tile map, ranking, island totals, province card and search.
-- **Sources differ**: 158 year-by-year checks between World Bank, IMF and BPS; every disagreement is listed with both values.
+- **Sources differ**: 232 year-by-year checks between World Bank, IMF, WHO, ILOSTAT and BPS; all 113 disagreements are listed with both values, widest gap first.
 - **704 yearly figures for Indonesia, 2000 to 2025**, plus the latest figure for 7 neighbours (Malaysia, Thailand, Viet Nam, Philippines, Singapore, India, China).
-- **Every figure carries its source and year**: publisher, series code and year printed under each number (World Bank WDI, IMF World Economic Outlook October 2026, BPS).
+- **Every figure carries its source and year**: publisher, series code and year printed under each number (World Bank WDI, IMF World Economic Outlook October 2026, WHO Global Health Observatory, UN SDG Global Database, ILOSTAT, BPS).
 - **Pages**: overview with a year picker, a page per topic, a page per indicator (trend chart, year slider, 1/5/10-year change, neighbour ranking, every year in a table, CSV download), compare with neighbours, a searchable table of all indicators, and sources and method with notes on reading the figures well.
 - **Works offline and on a phone**: plain HTML, CSS and ES modules under `app/`, no framework, no network request. The first load is three small files; the figures load just after.
 
@@ -25,7 +25,7 @@ Screenshots are kept as one-line base64 text in `screenshots/*.jpg.b64`; `main.t
 
 ## Data
 
-World Bank, World Development Indicators (api.worldbank.org, CC BY 4.0); IMF World Economic Outlook, October 2026 (IMF DataMapper); BPS-Statistics Indonesia province tables (bps.go.id). All read on 26 November 2026. This is an independent site, not an official publication of BPS-Statistics Indonesia.
+World Bank, World Development Indicators (api.worldbank.org, CC BY 4.0); IMF World Economic Outlook, October 2026 (IMF DataMapper); WHO Global Health Observatory (ghoapi.azureedge.net); UN Statistics Division SDG Global Database (unstats.un.org); ILOSTAT (ilo.org); BPS-Statistics Indonesia province tables (bps.go.id). All read on 26 November 2026. This is an independent site, not an official publication of BPS-Statistics Indonesia.
 
 ## License
 

@@ -5,7 +5,7 @@ export const TOPICS = [
   { id: 'people', name: 'Population', blurb: 'How many Indonesians there are, where they live and how the age mix is shifting.' },
   { id: 'economy', name: 'Economy', blurb: 'Output, growth, prices, trade and investment in current US dollars and percent.' },
   { id: 'work', name: 'Work & welfare', blurb: 'Jobs, poverty and how evenly income is shared.' },
-  { id: 'society', name: 'Health & society', blurb: 'Life expectancy, child survival, schooling, power and internet access.' },
+  { id: 'society', name: 'Health & society', blurb: 'Life expectancy, child and mother survival, stunting, water, schooling, power and internet access.' },
   { id: 'environment', name: 'Environment', blurb: 'Forest cover and carbon dioxide per person.' },
 ];
 
@@ -32,10 +32,15 @@ export const INDICATORS = [
   I('services', 'NV.SRV.TOTL.ZS', 'economy', 'Services', '% of GDP', 'pct', 1, 0, 'Value added share.'),
   I('unemp', 'SL.UEM.TOTL.ZS', 'work', 'Unemployment', '% of labour force', 'pct', 2, -1, 'Modelled ILO estimate, ages 15+.'),
   I('lfpr', 'SL.TLF.CACT.ZS', 'work', 'Labour force participation', '% of ages 15+', 'pct', 1, 1, 'Modelled ILO estimate.'),
+  I('youth', 'UNE_DEAP_SEX_AGE_RT_A', 'work', 'Youth unemployment', '% of labour force aged 15\u201324', 'pct', 1, -1, 'BPS labour force survey, as published by ILOSTAT.', 'ilo'),
   I('poverty', 'SI.POV.NAHC', 'work', 'Below the national poverty line', '% of people', 'pct', 1, -1, 'Each country sets its own line, so compare trends.'),
   I('gini', 'SI.POV.GINI', 'work', 'Gini index', '0 equal to 100 unequal', 'num', 1, -1, 'Spread of consumption or income.'),
   I('life', 'SP.DYN.LE00.IN', 'society', 'Life expectancy', 'years at birth', 'num', 1, 1, 'Years a newborn would live at today\u2019s death rates.'),
   I('infant', 'SP.DYN.IMRT.IN', 'society', 'Infant deaths', 'per 1,000 live births', 'num', 1, -1, 'Deaths before age one.'),
+  I('hale', 'WHOSIS_000002', 'society', 'Healthy life expectancy', 'years at birth', 'num', 1, 1, 'Years a newborn can expect to live in full health.', 'who'),
+  I('stunt', 'SH_STA_STNT', 'society', 'Stunted children', '% of under-5s', 'pct', 1, -1, 'Too short for their age; joint UNICEF, WHO and World Bank estimate.', 'sdg'),
+  I('mmr', 'SH_STA_MORT', 'society', 'Maternal deaths', 'per 100,000 live births', 'num', 0, -1, 'UN inter-agency estimate.', 'sdg'),
+  I('water', 'SH_H2O_SAFE', 'society', 'Safely managed drinking water', '% of people', 'pct', 1, 1, 'Clean, on the premises and available when needed (WHO/UNICEF JMP).', 'sdg'),
   I('literacy', 'SE.ADT.LITR.ZS', 'society', 'Adult literacy', '% of ages 15+', 'pct', 1, 1, 'Can read and write a short statement.'),
   I('internet', 'IT.NET.USER.ZS', 'society', 'Using the internet', '% of people', 'pct', 1, 1, 'Used it in the last three months.'),
   I('power', 'EG.ELC.ACCS.ZS', 'society', 'Access to electricity', '% of people', 'pct', 1, 1, 'Share with an electricity connection.'),
@@ -50,6 +55,9 @@ export const byKey = Object.fromEntries(INDICATORS.map((d) => [d.key, d]));
 export const SOURCES = {
   wdi: { name: 'World Bank, World Development Indicators', short: 'World Bank WDI', url: (c) => `https://data.worldbank.org/indicator/${c}?locations=ID` },
   imf: { name: 'IMF, World Economic Outlook (Oct 2026)', short: 'IMF WEO', url: (c) => `https://www.imf.org/external/datamapper/${c}@WEO/IDN` },
+  who: { name: 'WHO, Global Health Observatory', short: 'WHO GHO', url: (c) => `https://www.who.int/data/gho/data/indicators/indicator-details/GHO/${c}` },
+  sdg: { name: 'UN Statistics Division, SDG Global Database', short: 'UN SDG', url: (c) => `https://unstats.un.org/sdgs/dataportal/database?series=${c}` },
+  ilo: { name: 'ILO, ILOSTAT', short: 'ILOSTAT', url: (c) => `https://rshiny.ilo.org/dataexplorer/?lang=en&id=${c}&ref_area=IDN` },
   bps: { name: 'BPS-Statistics Indonesia', short: 'BPS', url: () => 'https://www.bps.go.id' },
 };
 export const SOURCE_NAME = SOURCES.wdi.name;

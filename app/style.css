@@ -126,3 +126,6 @@ tr.nat td{font-weight:700;background:var(--paper)}
 .btn.ghost{background:#fff;color:var(--ink)}
 .btn.ghost[aria-pressed=true]{background:#fde8eb;border-color:var(--red);color:var(--red)}
 .pin-hint{margin:-6px 0 14px}
+table.differ td small{max-width:460px}
+table.differ td{padding-top:6px;padding-bottom:6px}
+@media (max-width:760px){.nav{flex-wrap:wrap;overflow:visible;gap:0 2px;padding-bottom:4px}.nav a{padding:7px 7px;font-size:13px}}

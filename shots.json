@@ -1,34 +1,6 @@
 [
- {
-  "file": "1-overview.jpg",
-  "path": "#/",
-  "viewport": {
-   "width": 1280,
-   "height": 800
-  }
- },
- {
-  "file": "2-indicator.jpg",
-  "path": "#/indicator/gdppc?y=2025",
-  "viewport": {
-   "width": 1280,
-   "height": 900
-  }
- },
- {
-  "file": "3-provinces.jpg",
-  "path": "#/provinces?i=poor&p=11",
-  "viewport": {
-   "width": 1280,
-   "height": 900
-  }
- },
- {
-  "file": "4-phone-economy.jpg",
-  "path": "#/topic/economy",
-  "viewport": {
-   "width": 390,
-   "height": 844
-  }
- }
+ {"file": "1-overview.jpg", "path": "#/", "viewport": {"width": 1280, "height": 1000}},
+ {"file": "2-sources-differ.jpg", "path": "#/sources", "viewport": {"width": 1280, "height": 1100}},
+ {"file": "3-provinces.jpg", "path": "#/provinces?i=poor&p=11", "viewport": {"width": 1280, "height": 900}},
+ {"file": "4-phone-stunting.jpg", "path": "#/indicator/stunt", "viewport": {"width": 390, "height": 844}}
 ]
