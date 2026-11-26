@@ -1,0 +1,4 @@
+out/
+node_modules
+tools/node_modules
+*.muse-github-snapshot-sync.json*
