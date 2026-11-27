@@ -1,6 +1,6 @@
 [
- {"file": "1-overview.jpg", "path": "#/", "viewport": {"width": 1280, "height": 1000}},
- {"file": "2-sources-differ.jpg", "path": "#/sources", "viewport": {"width": 1280, "height": 1100}},
- {"file": "3-provinces.jpg", "path": "#/provinces?i=poor&p=11", "viewport": {"width": 1280, "height": 900}},
- {"file": "4-phone-stunting.jpg", "path": "#/indicator/stunt", "viewport": {"width": 390, "height": 844}}
+ {"file": "1-overview.jpg", "path": "#/", "viewport": {"width": 1280, "height": 800}},
+ {"file": "2-explorer.jpg", "path": "#/explore?i=unemp", "viewport": {"width": 1280, "height": 800}},
+ {"file": "3-provinces.jpg", "path": "#/provinces?i=poor&p=11", "viewport": {"width": 1280, "height": 800}},
+ {"file": "4-phone-compare.jpg", "path": "#/compare?i=life", "viewport": {"width": 390, "height": 844}}
 ]

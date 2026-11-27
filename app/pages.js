@@ -7,6 +7,7 @@ import { comparePage, bindCompare } from './views/compare.js';
 import { dataPage, bindDataSearch } from './views/data-table.js';
 import { sourcesPage } from './views/sources.js';
 import { provincesPage, bindProvinces } from './views/provinces.js';
+import { explorePage, bindExplore } from './views/explore.js';
 import { bindYearPicker } from './ui/year-picker.js';
 import { bindCsv } from './export/csv.js';
 import { bindPins } from './ui/pins.js';
@@ -24,7 +25,7 @@ const notFound = { title: 'Not found', section: '', html: '<section class="panel
 export function route(data, parts, params) {
   const year = yearFrom(params);
   const [head, arg] = parts;
-  if (!head) return { title: 'Indonesia in numbers', section: 'home', html: overviewPage(data, year) };
+  if (!head) return { title: 'Indonesia in numbers', section: 'home', html: overviewPage(data, year, params) };
   if (head === 'topic') {
     const html = topicPage(data, arg, year);
     return html ? { title: TOPICS.find((t) => t.id === arg).name, section: arg, html } : notFound;
@@ -33,6 +34,7 @@ export function route(data, parts, params) {
     const html = indicatorPage(data, arg, params.has('y') ? year : null);
     return html ? { title: byKey[arg].label, section: byKey[arg].topic, html } : notFound;
   }
+  if (head === 'explore') return { title: 'Indicator explorer', section: 'explore', html: explorePage(data, params) };
   if (head === 'provinces') return { title: 'Provinces', section: 'provinces', html: provincesPage(data, params) };
   if (head === 'compare') return { title: 'Compare', section: 'compare', html: comparePage(data, params) };
   if (head === 'data') return { title: 'All indicators', section: 'data', html: dataPage(data) };
@@ -43,7 +45,8 @@ export function route(data, parts, params) {
 export function bindPage(root, data, params) {
   bindYearPicker(root);
   bindCompare(root, params);
-  bindProvinces(root, params);
+  bindProvinces(root, params, data);
+  bindExplore(root, params);
   bindDataSearch(root);
   bindCsv(root, data);
   bindPins(root);

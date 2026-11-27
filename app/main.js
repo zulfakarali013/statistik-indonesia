@@ -17,7 +17,7 @@ function parse() {
 }
 
 function markNav(section) {
-  document.querySelectorAll('.nav a').forEach((a) => a.classList.toggle('on', a.dataset.nav === section));
+  document.querySelectorAll('.nav a, .tabbar a').forEach((a) => a.classList.toggle('on', a.dataset.nav === section));
 }
 
 async function render() {

@@ -11,7 +11,7 @@ Statistik Indonesia: a fast national statistics site for Indonesia with every fi
 - **Sources differ**: 232 year-by-year checks between World Bank, IMF, WHO, ILOSTAT and BPS; all 113 disagreements are listed with both values, widest gap first.
 - **704 yearly figures for Indonesia, 2000 to 2025**, plus the latest figure for 7 neighbours (Malaysia, Thailand, Viet Nam, Philippines, Singapore, India, China).
 - **Every figure carries its source and year**: publisher, series code and year printed under each number (World Bank WDI, IMF World Economic Outlook October 2026, WHO Global Health Observatory, UN SDG Global Database, ILOSTAT, BPS).
-- **Pages**: overview with a year picker, a page per topic, a page per indicator (trend chart, year slider, 1/5/10-year change, neighbour ranking, every year in a table, CSV download), compare with neighbours, a searchable table of all indicators, and sources and method with notes on reading the figures well.
+- **Pages**: overview with a year picker, headline cards led by BPS figures and a poverty story chart with range buttons, an indicator explorer (search, topic chips, year range, chart or table, CSV), a province page with national KPIs, tile map and sortable ranking, a phone tab bar, a page per topic, a page per indicator (trend chart, year slider, 1/5/10-year change, neighbour ranking, every year in a table, CSV download), compare with neighbours, a searchable table of all indicators, and sources and method with notes on reading the figures well.
 - **Works offline and on a phone**: plain HTML, CSS and ES modules under `app/`, no framework, no network request. The first load is three small files; the figures load just after.
 
 ## Run it
